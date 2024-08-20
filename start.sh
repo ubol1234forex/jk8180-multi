@@ -23,7 +23,7 @@ n=0
 n=0
    until [ $n -ge ]
    do
-      git clone "https://github.com/ubol1234forex/set-mode.git"
+      git clone "https://github.com/ubol1234forex/set-mode.git" && break
       n=$[$n+1]
       sleep 1
    done
