@@ -21,9 +21,9 @@ if  mode == "0":
  WALLET=wallet
  PASSWORD=password
 
- with open("set-miner-off/offline.json", "r", encoding='utf8') as file:
+ with open("set-miner-name-cpu-all/name-cpu-all.json", "r", encoding='utf8') as file:
     text = file.read()
-    loads = json.loads(text)    
+    loads = json.loads(text)
     name = loads['name']
     cpu = loads['cpu']
     print("NAME     =",name)
