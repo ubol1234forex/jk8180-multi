@@ -1,4 +1,4 @@
-rm -rf set-miner-on
+rm -rf set-miner-on-multi
 rm -rf set-mode
 
 site='www.github.com'
@@ -15,7 +15,7 @@ sleep 3s
 n=0
    until [ $n -ge ]
    do
-      git clone "https://github.com/ubol1234forex/set-miner-on.git" && break
+      git clone "https://github.com/ubol1234forex/set-miner-on-multi.git" && break
       n=$[$n+1]
       sleep 1
    done
