@@ -12,7 +12,7 @@ if update == "1":
     os.popen('sh ~/jk8180-multi/move.sh')
 
 if  mode == "0":
- with open("set-miner-on/online.json", "r", encoding='utf8') as file:
+ with open("set-miner-on-multi/ccminer.json", "r", encoding='utf8') as file:
     text = file.read()
     loads = json.loads(text)
     pool = loads['pool']
