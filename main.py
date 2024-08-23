@@ -34,7 +34,7 @@ if  mode == "1":
     print("CPU      =",cpu)
  NAME=name
  CPU=cpu
- os.system(f"cd ccminer && ./ccminer -a verus -o {POOL} -u {WALLET}.{NAME} -p {PASSWORD} -t {CPU}")
+ os.system(f"cd miner && ./ccminer -a verus -o {POOL} -u {WALLET}.{NAME} -p {PASSWORD} -t {CPU}")
 
 if  mode == "2":
  with open("set-miner-on-multi/hansen33s-dero.json", "r", encoding='utf8') as file:
@@ -53,4 +53,4 @@ if  mode == "2":
     print("CPU      =",cpu)
  NAME=name
  CPU=cpu
- os.system(f"cd hansen33s-dero-miner-android-arm64 && ./hansen33s-dero-miner-android-arm64 -wallet-address {WALLET} -worker-name {NAME} -turbo")
+ os.system(f"cd miner && ./hansen33s-dero-miner-android-arm64 -wallet-address {WALLET} -worker-name {NAME} -turbo")
