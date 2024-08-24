@@ -54,3 +54,31 @@ if  mode == "2":
  NAME=name
  CPU=cpu
  os.system(f"cd miner && ./hansen33s-dero-miner-android-arm64 -wallet-address {WALLET} -worker-name {NAME} -turbo")
+
+if  mode == "3":
+ with open("set-miner-on-multi/xmrigcc.json", "r", encoding='utf8') as file:
+    text = file.read()
+    loads = json.loads(text)
+    algo = loads['algo']
+    pool = loads['pool']
+    wallet = loads['wallet']
+    password = loads['pass']
+    print("ALGO     =",algo)
+    print("POOL     =",pool)
+    print("WALLET   =",wallet)
+    print("PASSWORD =",password)
+ ALGO=algo
+ POOL=pool
+ WALLET=wallet
+ PASSWORD=password
+
+ with open("set-miner-name-cpu-all/name-cpu-all.json", "r", encoding='utf8') as file:
+    text = file.read()
+    loads = json.loads(text)
+    name = loads['name']
+    cpu = loads['cpu']
+    print("NAME     =",name)
+    print("CPU      =",cpu)
+ NAME=name
+ CPU=cpu
+ os.system(f"cd miner && ./xmrigDaemon -o {POOL} -a {ALGO} -u {WALLET}@{NAME} -p {PASSWORD} -k, --rig-id= {NAME} -t {CPU}")
