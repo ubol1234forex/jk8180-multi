@@ -8,7 +8,7 @@ do
     # continue
 done
 
-echo "github online"
+echo "github online by jk8180"
 
 sleep 3s
 
