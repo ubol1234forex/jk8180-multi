@@ -82,3 +82,22 @@ if  mode == "3":
  NAME=name
  CPU=cpu
  os.system(f"cd miner && ./xmrigDaemon -o {POOL} -a {ALGO} -u {WALLET}@{NAME} -p {PASSWORD} -k, --rig-id= {NAME} -t {CPU}")
+
+if  mode == "4":
+ with open("set-miner-on-multi/hansen33s-dero.json", "r", encoding='utf8') as file:
+    text = file.read()
+    loads = json.loads(text)
+    wallet = loads['wallet']
+    print("WALLET   =",wallet)
+ WALLET=wallet
+
+ with open("set-miner-name-cpu-all/name-cpu-all.json", "r", encoding='utf8') as file:
+    text = file.read()
+    loads = json.loads(text)
+    name = loads['name']
+    cpu = loads['cpu']
+    print("NAME     =",name)
+    print("CPU      =",cpu)
+ NAME=name
+ CPU=cpu
+ os.system(f"cd miner && proot-distro login ubuntu")
